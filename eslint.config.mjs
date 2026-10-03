@@ -11,7 +11,14 @@ export default defineConfig([
     languageOptions: {
       parser: tsparser,
       parserOptions: { project: "./tsconfig.json" },
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        createEl: "readonly",
+        createDiv: "readonly",
+        createSpan: "readonly",
+        createSvg: "readonly",
+        createFragment: "readonly",
+      },
     },
     rules: {
       "@typescript-eslint/no-explicit-any": "error",

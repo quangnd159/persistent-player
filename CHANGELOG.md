@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Use Obsidian's `createEl` and `createDiv` helpers instead of `document.createElement`.
+
 ## 1.0.0
 
 - Initial release.

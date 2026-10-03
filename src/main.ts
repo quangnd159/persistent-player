@@ -41,9 +41,7 @@ class Controller {
 
 		let el = this.pool.get(note);
 		if (!el) {
-			el = document.createElement("audio");
-			el.addClass("pp-pooled");
-			document.body.appendChild(el);
+			el = document.body.createEl("audio", { cls: "pp-pooled" });
 			this.pool.set(note, el);
 			this.wireEvents(el);
 		}
@@ -156,8 +154,7 @@ class NowPlayingBar {
 		if (!view) return;
 
 		this.bar?.remove();
-		const bar = (this.bar = document.createElement("div"));
-		bar.addClass("pp-now-playing");
+		const bar = (this.bar = createDiv("pp-now-playing"));
 
 		this.mkSkip(bar, "-5s", "Skip back 5 seconds", -5);
 		const play = (this.playBtn = bar.createDiv("clickable-icon pp-np-play"));
