@@ -1,0 +1,94 @@
+/* -- Now Playing Bar ------------------------------------------------------ */
+
+.pp-pooled {
+	position: fixed;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.pp-now-playing {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	height: 32px;
+	padding: 0 8px;
+	background-color: var(--background-secondary);
+	border-bottom: 1px solid var(--background-modifier-border);
+	font-size: var(--font-ui-smaller);
+	color: var(--text-normal);
+	flex-shrink: 0;
+	user-select: none;
+}
+
+.pp-np-play { flex-shrink: 0; }
+.pp-np-play svg { width: 14px; height: 14px; }
+
+.pp-np-skip {
+	flex-shrink: 0;
+	font-size: var(--font-ui-smaller);
+	font-weight: var(--font-medium);
+	font-variant-numeric: tabular-nums;
+	font-family: var(--font-interface);
+	color: var(--text-muted);
+	padding: 2px 4px;
+}
+
+.pp-np-skip:hover { color: var(--text-normal); }
+
+.pp-np-center {
+	flex: 1;
+	min-width: 40px;
+	cursor: pointer;
+	padding: 4px 0;
+}
+
+.pp-np-track {
+	position: relative;
+	height: 3px;
+	background: var(--background-modifier-border);
+	border-radius: 2px;
+}
+
+.pp-np-fill {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%; width: 0%;
+	background: var(--interactive-accent);
+	border-radius: 2px;
+}
+
+.pp-np-center:hover .pp-np-track { height: 5px; }
+
+.pp-np-right {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	flex-shrink: 0;
+}
+
+.pp-np-time {
+	font-size: var(--font-ui-smaller);
+	color: var(--text-faint);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+	padding: 0 4px;
+}
+
+.pp-np-rate {
+	font-size: var(--font-ui-smaller);
+	font-weight: var(--font-medium);
+	font-variant-numeric: tabular-nums;
+	font-family: var(--font-interface);
+	padding: 2px 4px;
+}
+
+.pp-np-close {
+	opacity: 0;
+	transition: opacity 0.1s ease;
+}
+
+.pp-np-close svg { width: 14px; height: 14px; }
+
+.pp-now-playing:hover .pp-np-close { opacity: 1; }

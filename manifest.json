@@ -1,0 +1,10 @@
+{
+  "id": "persistent-player",
+  "name": "Persistent Player",
+  "version": "1.0.0",
+  "minAppVersion": "1.13.0",
+  "description": "Keep audio playing when its embed scrolls out of view, and pick up where you left off when you return.",
+  "author": "Quang Nguyen Dang",
+  "authorUrl": "https://github.com/quangnd159",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types", "node_modules/obsidian"],
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "module": "ESNext",
+    "target": "ES2022",
+    "allowJs": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": true,
+    "moduleResolution": "Bundler",
+    "importHelpers": false,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2022"]
+  },
+  "include": ["src/**/*.ts"]
+}
