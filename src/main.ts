@@ -171,7 +171,7 @@ class NowPlayingBar {
 		center.addEventListener("mousedown", (e) => { this.dragging = true; this.seekTo(e.clientX); });
 
 		const right = bar.createDiv("pp-np-right");
-		this.timeEl = right.createEl("span", { cls: "pp-np-time" });
+		this.timeEl = right.createSpan({ cls: "pp-np-time" });
 		this.syncProgress();
 		this.rateEl = right.createDiv("clickable-icon pp-np-rate");
 		this.rateEl.textContent = `${this.ctrl.playbackRate}x`;

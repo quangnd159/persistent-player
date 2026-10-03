@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Use `createSpan` for the time label instead of `createEl("span", ...)`.
+
 ## 1.0.1
 
 - Use Obsidian's `createEl` and `createDiv` helpers instead of `document.createElement`.
